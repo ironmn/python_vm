@@ -1,5 +1,5 @@
 #pragma once
-
+#define MAX_ARRAY_LEN 65536
 template<typename T>
 class ArrayList{
 private:
