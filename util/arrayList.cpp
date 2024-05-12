@@ -1,5 +1,7 @@
 #include "arrayList.hpp"
 #include "spdlog/spdlog.h"
+template class ArrayList<int>;
+template class ArrayList<double>;
 
 template<typename T>
 ArrayList<T>::ArrayList(int n)
@@ -53,7 +55,7 @@ ArrayList<T>::insert(int index, T t) {
         expand();
     }
     //倒序遍历，这样可以不使用中间变量
-    for (i = _size ;i > index; i--) {
+    for (int i = _size ;i > index; i--) {
         _array[i] = _array[i - 1];
     }
     _array[index] = t;
@@ -89,7 +91,7 @@ ArrayList<T>::get(int index)
 {
     if (index > _size) {
         spdlog::error("the index is greater than size {}", _size);
-        return;
+        return T();
     }
     
     return _array[index];
