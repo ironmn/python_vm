@@ -3,6 +3,12 @@
 template class ArrayList<int>;
 template class ArrayList<double>;
 
+class HiObject;
+template class ArrayList<HiObject*>;
+
+class HiString;
+template class ArrayList<HiString*>;
+
 template<typename T>
 ArrayList<T>::ArrayList(int n)
 {
