@@ -108,7 +108,5 @@ template<typename T>
 T 
 ArrayList<T>::pop()
 {
-    T ans = _array[_size - 1];
-    --_size;
-    return ans;
+    return _array[--_size];
 }
